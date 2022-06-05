@@ -25,14 +25,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        splitSheetController.statusBarStyle = .lightContent
+        /// If true, `mainViewController` will shift up as the sheet is shown.
+        splitSheetController.displaceContent = true
+
+        /// Show a grabber handle.
+        splitSheetController.showHandle = true
+
+        /// The minimum sheet height.
+        splitSheetController.minimumSheetHeight = CGFloat(400)
+
+        /// When the sheet is shown and dragged within this limit, the sheet will bounce back.
+        splitSheetController.snappingDistance = CGFloat(150)
+
+        /// How long the show/hide animation takes.
+        splitSheetController.animationDuration = CGFloat(0.6)
+
+        /// If swiping up to show the sheet is allowed or not.
+        splitSheetController.swipeUpToShowAllowed = true
+
+        /// Override the status bar color.
+        splitSheetController.statusBarStyle = UIStatusBarStyle.default
+        
         embed(splitSheetController, inside: view)
     }
 }
 
 class MainViewController: UIViewController {
     lazy var imageView: UIImageView = {
-        /// image credit: https://unsplash.com/photos/yXIKZ5PMqn4
+        /// image credit: https://unsplash.com/photos/aEK8X33l7V4
         let image = UIImage(named: "Image")
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFill

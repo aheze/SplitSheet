@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "harold-wainwright-aEK8X33l7V4-unsplash (1).jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

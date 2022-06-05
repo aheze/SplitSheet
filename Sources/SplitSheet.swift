@@ -105,10 +105,6 @@ public extension SplitSheetController {
         scrollView.contentInsetAdjustmentBehavior = .never
         scrollView.delegate = self
 
-        if showHandle {
-            addHandle()
-        }
-
         updateShowing(false)
 
         // MARK: Add subviews
@@ -166,6 +162,7 @@ public extension SplitSheetController {
 
     /// Add a handle view.
     func addHandle() {
+        guard self.handleView == nil else { return }
         let handleView = UIView()
         handleView.backgroundColor = .secondaryLabel
         handleView.layer.cornerRadius = 2.5
@@ -210,6 +207,13 @@ public extension SplitSheetController {
         /// If `swipeUpToShowAllowed` is not enabled, prevent scrolling up when hidden.
         if !swipeUpToShowAllowed {
             scrollView.isScrollEnabled = showing
+        }
+
+        if showHandle {
+            addHandle()
+        } else if let handleView = handleView {
+            handleView.removeFromSuperview() /// Hide the handle if it already exists.
+            self.handleView = nil
         }
     }
 }
