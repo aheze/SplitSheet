@@ -46,6 +46,7 @@ class ViewController: UIViewController {
         /// Override the status bar color.
         splitSheetController.statusBarStyle = UIStatusBarStyle.default
         
+        /// Add the sheet.
         embed(splitSheetController, inside: view)
     }
 }
