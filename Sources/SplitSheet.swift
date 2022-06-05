@@ -42,7 +42,7 @@ public class SplitSheetController: UIViewController {
     // MARK: - State
 
     /// The current state of the sheet. `true` if shown, `false` if hidden.
-    @Published private(set) var showing = false
+    @Published public private(set) var showing = false
 
     /// You can store cancellables here!
     public var cancellables = Set<AnyCancellable>()
