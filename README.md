@@ -1,3 +1,3 @@
 # SplitSheet
 
-A description of this package.
+A split sheet made with `UIScrollView`.
