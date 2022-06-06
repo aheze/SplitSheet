@@ -1,6 +1,14 @@
 # SplitSheet
 
-A split sheet made with `UIScrollView`.
+A lightweight, fully interactive split-screen sheet.
+
+- Powered by [`UIScrollView`](https://developer.apple.com/documentation/uikit/uiscrollview) for super-smooth gestures.
+- Show/hide either programmatically or with a swipe gesture.
+- Gestures are fully interruptible.
+- Won't affect buttons and gestures nested in subviews.
+- Supports sizing detents (hidden, shown, expanded).
+- Super simple (~300 lines of code).
+- iOS 9+. 
 
 https://user-images.githubusercontent.com/49819455/172063485-9cf70388-cad3-4c79-97ec-e73a176e73d8.mp4
 
