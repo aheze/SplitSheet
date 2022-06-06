@@ -9,7 +9,7 @@ A lightweight, fully interactive split-screen sheet.
 - Gestures are fully interruptible.
 - Won't affect buttons and gestures nested in subviews.
 - Supports sizing detents (hidden, shown, expanded).
-- Fully compatible with Auto Layout and self-sizing.
+- Fully compatible with Auto Layout self-sizing.
 - Super simple, no dependencies, ~300 lines of code.
 - Replicates iOS 15's sheet detents while supporting iOS 9+.
 
