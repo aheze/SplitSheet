@@ -10,6 +10,12 @@ import Combine
 import SplitSheet
 import UIKit
 
+enum Shared {
+    /// Store references to Combine sinks.
+    /// Used for observing changes in `parentSplitSheetController.$showing`.
+    static var cancellables = Set<AnyCancellable>()
+}
+
 class ViewController: UIViewController {
     let mainViewController = MainViewController()
     let sheetViewController = SheetViewController()
@@ -45,7 +51,7 @@ class ViewController: UIViewController {
 
         /// Override the status bar color.
         splitSheetController.statusBarStyle = UIStatusBarStyle.default
-        
+
         /// Add the sheet.
         embed(splitSheetController, inside: view)
     }
@@ -85,16 +91,17 @@ class MainViewController: UIViewController {
         ])
 
         if let parentSplitSheetController = parentSplitSheetController {
-            parentSplitSheetController.$showing
+            parentSplitSheetController
+                .publisher(for: \.showing)
 
-                /// Called whenever `parentSplitSheetController.$showing` changes.
+                /// Called whenever `parentSplitSheetController.showing` changes.
                 /// Note: is also called immediately - see https://stackoverflow.com/q/60568858/14351818
                 .sink { [weak button] showing in
                     configuration.baseBackgroundColor = showing ? UIColor.systemGreen : UIColor.systemOrange
                     configuration.attributedTitle = AttributedString(showing ? "Sheet Shown" : "Sheet Hidden", attributes: container)
                     button?.configuration = configuration
                 }
-                .store(in: &parentSplitSheetController.cancellables)
+                .store(in: &Shared.cancellables)
         }
 
         return button
