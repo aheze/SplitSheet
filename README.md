@@ -1,6 +1,6 @@
-# SplitSheet
-
 ![Header Image](Assets/Header.png)
+
+# SplitSheet
 
 A lightweight, fully interactive split-screen sheet.
 
