@@ -1,5 +1,7 @@
 # SplitSheet
 
+![Header Image](Assets/Header.png)
+
 A lightweight, fully interactive split-screen sheet.
 
 - Powered by `UIScrollView` for super-smooth gestures.
