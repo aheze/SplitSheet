@@ -12,6 +12,12 @@ A lightweight, fully interactive split-screen sheet.
 
 https://user-images.githubusercontent.com/49819455/172063485-9cf70388-cad3-4c79-97ec-e73a176e73d8.mp4
 
+### Showcase
+
+| ![Click to show sheet](Assets/Click.gif) | ![Swipe between sheet detents](Assets/Detents.gif) | ![Overlay the sheet without displacing main content](Assets/Overlay.gif) |
+|---|---|---|
+
+
 ### Installation
 Requires iOS 9+. SplitSheet can be installed through the [Swift Package Manager](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app) (recommended) or manually.
 
@@ -38,14 +44,14 @@ Drag <a href="https://github.com/aheze/SplitSheet/blob/main/Sources/SplitSheet.s
 <br>
 
 ```
-Sources/SplitSheet.swift
+https://github.com/aheze/SplitSheet
 ```
 </td>
 <td>
 <br>
 
 ```
-Add the Swift Package Manager URL:
+Sources/SplitSheet.swift
 ```
 </td>
 </tr>

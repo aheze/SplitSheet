@@ -32,13 +32,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         /// If true, `mainViewController` will shift up as the sheet is shown.
-        splitSheetController.displaceContent = true
+        splitSheetController.displaceContent = false
 
         /// Show a grabber handle.
         splitSheetController.showHandle = true
 
         /// The minimum sheet height.
-        splitSheetController.minimumSheetHeight = CGFloat(400)
+        splitSheetController.minimumSheetHeight = CGFloat(300)
 
         /// When the sheet is shown and dragged within this limit, the sheet will bounce back.
         splitSheetController.snappingDistance = CGFloat(150)
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         splitSheetController.swipeUpToShowAllowed = true
 
         /// Override the status bar color.
-        splitSheetController.statusBarStyle = UIStatusBarStyle.default
+        splitSheetController.statusBarStyle = UIStatusBarStyle.lightContent
 
         /// Add the sheet.
         embed(splitSheetController, inside: view)
@@ -59,7 +59,9 @@ class ViewController: UIViewController {
 
 class MainViewController: UIViewController {
     lazy var imageView: UIImageView = {
-        /// image credit: https://unsplash.com/photos/aEK8X33l7V4
+        /// image credits:
+        /// https://unsplash.com/photos/aEK8X33l7V4
+        /// https://unsplash.com/photos/bokTMevSgxY
         let image = UIImage(named: "Image")
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFill
