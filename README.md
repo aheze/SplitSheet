@@ -10,8 +10,6 @@ A lightweight, fully interactive split-screen sheet.
 - Super simple (~300 lines of code).
 - iOS 9+. 
 
-https://user-images.githubusercontent.com/49819455/172063485-9cf70388-cad3-4c79-97ec-e73a176e73d8.mp4
-
 ### Showcase
 
 | ![Click to show sheet](Assets/Click.gif) | ![Swipe between sheet detents](Assets/Detents.gif) | ![Overlay the sheet without displacing main content](Assets/Overlay.gif) |
