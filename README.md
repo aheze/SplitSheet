@@ -29,7 +29,7 @@ Add the Package URL:
 Manual
 </strong>
 <br>
-Drag [this file](https://github.com/aheze/SplitSheet/blob/main/Sources/SplitSheet.swift) into your project:
+Drag <a href="https://github.com/aheze/SplitSheet/blob/main/Sources/SplitSheet.swift">this file</a> into your project:
 </td>
 </tr>
   
