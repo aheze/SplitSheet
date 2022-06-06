@@ -102,8 +102,6 @@ class ViewController: UIViewController {
         
         /// Add the sheet.
         embed(splitSheetController, inside: view)
-
-        splitSheetController.show(true)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -113,7 +111,7 @@ class ViewController: UIViewController {
         splitSheetController.show(true)
     }
 
-    /// Propagate the splitSheetController's custom status bar to this view controller.
+    /// Propagate `splitSheetController`'s custom status bar to this view controller.
     override var childForStatusBarStyle: UIViewController? {
         return splitSheetController
     }
