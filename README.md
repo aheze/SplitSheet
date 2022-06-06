@@ -136,7 +136,7 @@ class SheetViewController: UIViewController {
 
 
 ### Author
-Popovers is made by [aheze](https://github.com/aheze).
+SplitSheet is made by [aheze](https://github.com/aheze).
 
 ### Contributing
 All contributions are welcome. Just [fork](https://github.com/aheze/SplitSheet/fork) the repo, then make a pull request.
