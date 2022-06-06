@@ -55,6 +55,13 @@ class ViewController: UIViewController {
         /// Add the sheet.
         embed(splitSheetController, inside: view)
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        /// Show the sheet programmatically.
+        splitSheetController.show(true)
+    }
 }
 
 class MainViewController: UIViewController {

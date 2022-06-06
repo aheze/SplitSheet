@@ -279,7 +279,6 @@ extension SplitSheetController: UIScrollViewDelegate {
         let detents = [hiddenDetent, shownDetent, expandedDetent]
         let predictedContentOffset = targetContentOffset.pointee.y /// Use the system-predicted target content to take care of flicking with the finger.
 
-        print("distanceToShown: \(distanceToShown)")
         switch velocity.y {
         /// When the velocity is negative (scrolled down.)
         case ..<0:
@@ -309,7 +308,7 @@ extension SplitSheetController: UIScrollViewDelegate {
                 targetContentOffset.pointee.y = 0 /// Hide if near the bottom.
             }
         }
-        
+
         /// When the offset is 0, the sheet is hidden. Otherwise, it's shown.
         updateShowing(targetContentOffset.pointee.y != 0)
     }

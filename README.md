@@ -9,6 +9,7 @@ A lightweight, fully interactive split-screen sheet.
 - Gestures are fully interruptible.
 - Won't affect buttons and gestures nested in subviews.
 - Supports sizing detents (hidden, shown, expanded).
+- Fully compatible with Auto Layout and self-sizing.
 - Super simple, no dependencies, ~300 lines of code.
 - Replicates iOS 15's sheet detents while supporting iOS 9+.
 
@@ -66,16 +67,14 @@ import SplitSheet
 import UIKit
 
 class ViewController: UIViewController {
+
+    /// Works with any view controller.
     let mainViewController = MainViewController()
     let sheetViewController = SheetViewController()
     lazy var splitSheetController = SplitSheetController(
         mainViewController: mainViewController,
         sheetViewController: sheetViewController
     )
-
-    override var childForStatusBarStyle: UIViewController? {
-        return splitSheetController
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,9 +102,40 @@ class ViewController: UIViewController {
         
         /// Add the sheet.
         embed(splitSheetController, inside: view)
+
+        splitSheetController.show(true)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        /// Show the sheet programmatically.
+        splitSheetController.show(true)
+    }
+
+    /// Propagate the splitSheetController's custom status bar to this view controller.
+    override var childForStatusBarStyle: UIViewController? {
+        return splitSheetController
     }
 }
 ```
+
+### Self-Sizing and Detents
+It's simple — if your sheet view controller's intrinsic size is larger than the `minimumSheetHeight`, a "large" detent will be added.
+
+```swift
+class SheetViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .systemTeal
+        view.heightAnchor.constraint(equalToConstant: 800).isActive = true
+    }
+}
+```
+
+<img src="Assets/SelfSizing.gif" width="250" alt="Hidden, shown, and expanded modes.">
+
 
 ### Author
 Popovers is made by [aheze](https://github.com/aheze).
