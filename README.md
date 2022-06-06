@@ -2,7 +2,7 @@
 
 A lightweight, fully interactive split-screen sheet.
 
-- Powered by [`UIScrollView`](https://developer.apple.com/documentation/uikit/uiscrollview) for super-smooth gestures.
+- Powered by `UIScrollView` for super-smooth gestures.
 - Show/hide either programmatically or with a swipe gesture.
 - Gestures are fully interruptible.
 - Won't affect buttons and gestures nested in subviews.
@@ -116,13 +116,13 @@ Open an [issue](https://github.com/aheze/SplitSheet/issues) or join the [Discord
 
 ### Apps Using SplitSheet
 
-[Find](http://getfind.app) is an app that lets you find text in real life. SplitSheet is currently used for the camera gallery view / info sheet — download to check it out!
+[Find](http://getfind.app) is an app that lets you find text in real life. SplitSheet is currently used for the photos gallery view / info sheet — download to check it out!
 
 <a href="http://getfind.app">
   <img src="https://getfind.app/assets/SocialPreview.png" height="300" alt="Find App">
 </a>
 
-If you have an app that uses Popovers, just make a PR or [message me](https://twitter.com/aheze0).
+If you have an app that uses SplitSheet, just make a PR or [message me](https://twitter.com/aheze0).
 
 ### License
 
