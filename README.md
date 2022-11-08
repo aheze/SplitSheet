@@ -135,21 +135,16 @@ class SheetViewController: UIViewController {
 <img src="Assets/SelfSizing.gif" width="250" alt="Hidden, shown, and expanded modes.">
 
 
-### Author
-SplitSheet is made by [aheze](https://github.com/aheze).
-
-### Contributing
-All contributions are welcome. Just [fork](https://github.com/aheze/SplitSheet/fork) the repo, then make a pull request.
-
-### Need Help?
-Open an [issue](https://github.com/aheze/SplitSheet/issues) or join the [Discord server](https://discord.com/invite/Pmq8fYcus2). You can also ping me on [Twitter](https://twitter.com/aheze0). Or read the source code — there's lots of comments.
+Author | Contributing | Need Help?
+--- | --- | ---
+SplitSheet is made by [aheze](https://github.com/aheze). | All contributions are welcome. Just [fork](https://github.com/aheze/SplitSheet/fork) the repo, then make a pull request. | Open an [issue](https://github.com/aheze/SplitSheet/issues) or join the [Discord server](https://discord.com/invite/Pmq8fYcus2). You can also ping me on [Twitter](https://twitter.com/aheze0). Or read the source code — there's lots of comments.
 
 ### Apps Using SplitSheet
 
-[Find](http://getfind.app) is an app that lets you find text in real life. SplitSheet is currently used for the photos gallery view / info sheet — download to check it out!
+[Find](http://getfind.app) is an app for finding your photos. SplitSheet is used for the photo gallery view and info sheet — download to check it out!
 
 <a href="http://getfind.app">
-  <img src="https://getfind.app/assets/SocialPreview.png" height="300" alt="Find App">
+  <img src="https://raw.githubusercontent.com/aheze/OpenFind/main/Assets/v3%20Thumbnail.jpg" height="300" alt="Find App">
 </a>
 
 If you have an app that uses SplitSheet, just make a PR or [message me](https://twitter.com/aheze0).
